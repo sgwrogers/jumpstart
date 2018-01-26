@@ -9,9 +9,6 @@ html {
   border: none;
 }
 
-.navbar ul {
-  margin-left: 1.7rem;
-}
 
 .navbar-default .navbar-nav a {
 font-size: 1.1rem;
@@ -32,9 +29,25 @@ font-weight: 600;
   margin-right: 2rem;
 }
 
+
 /* main banner */
-.jumbotron {
+.jumbotron-bike {
   background: url('../images/jumbotron-bike.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.jumbotron-beer {
+  background: url('../images/jumbotron-beer.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.jumbotron-flowers {
+  background: url('../images/jumbotron-flowers.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.jumbotron-duffel {
+  background: url('../images/jumbotron-duffel.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -63,13 +76,23 @@ font-weight: 600;
   border: none;
   background-color: #399bd1;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  padding: 1.3rem auto;
   margin: 2.8rem auto 11.85rem auto;
   width: 11.4rem;
+  height: 4rem;
 }
 
 .btn-primary a {
   color: white;
+}
+
+@media only screen and (max-width: 780px) {
+  .jumbotron h1 {
+    font-size: 5.7rem;
+  }
+
+  .jumbotron p {
+    width: 80%;
+  }
 }
 
 /* Featured project */
@@ -84,8 +107,19 @@ font-weight: 600;
   margin-bottom: 1.4rem;
 }
 
-.img-container img {
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
   opacity: 0.7;
+  transition: 0.5s, 0.5s;
+}
+
+.image-container img:hover {
+  opacity: 1;
+  transform: scale(1.3);
+  transition: 0.5s, 0.5s;
 }
 
 .container-fluid h4 {
@@ -102,13 +136,25 @@ font-weight: 600;
   line-height: 1.4;
 }
 
+@media only screen and (max-width: 780px) {
+  .container-fluid {
+    margin: 0;
+  }
+}
+
 /* Projects */
-.col-md-4 h4 {
+.col-sm-4 h4 {
   margin-top: 1.5rem;
 }
 
-.col-md-4 p {
+.col-sm-4 p {
   margin-bottom: 5.85rem;
+}
+
+@media only screen and (max-width: 780px) {
+  .col-xs-12 .image-container img {
+    width: 100%;
+  }
 }
 
 /* footer */
