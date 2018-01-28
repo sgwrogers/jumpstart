@@ -31,32 +31,34 @@ font-weight: 600;
 
 
 /* main banner */
-.jumbotron-bike {
-  background: url('../images/jumbotron-bike.jpg') no-repeat center center;
+.jumbotron {
+  height: 44rem;
+  padding-top: 10rem;
+  text-align: center;
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-.jumbotron-beer {
-  background: url('../images/jumbotron-beer.jpg') no-repeat center center;
-  background-size: cover;
+.background-bike {
+  background-image: url('../images/jumbotron-bike.jpg');
 }
 
-.jumbotron-flowers {
-  background: url('../images/jumbotron-flowers.jpg') no-repeat center center;
-  background-size: cover;
+.background-beer {
+  background-image: url('../images/jumbotron-beer.jpg');
 }
 
-.jumbotron-duffel {
-  background: url('../images/jumbotron-duffel.jpg') no-repeat center center;
-  background-size: cover;
+.background-flowers {
+  background-image: url('../images/jumbotron-flowers.jpg');
+}
+
+.background-duffel {
+  background-image: url('../images/jumbotron-duffel.jpg');
 }
 
 .jumbotron h1 {
-  color: white;
   font-size: 7.1rem;
-  font-family: 'Monoton';
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  margin-top: 11.85rem;
+  font-family: 'Monoton', sans-serif;
   text-align: center;
 }
 
@@ -73,16 +75,33 @@ font-weight: 600;
 }
 
 .btn-primary {
-  border: none;
+  width: 160px;
+  padding: 1.3rem 0;
+  border: 0;
+  margin-top: 2.8rem;
   background-color: #399bd1;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  margin: 2.8rem auto 11.85rem auto;
-  width: 11.4rem;
-  height: 4rem;
+  transition: .5s box-shadow;
 }
 
-.btn-primary a {
-  color: white;
+.btn-primary:hover {
+  background-color: #399bd1;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+}
+
+.btn-primary:active {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.relative-wrapper {
+  position: relative;
+  top: -16rem;
+  width: 100%;
+  text-align: center;
+}
+
+.slick-slide {
+  outline: none;
 }
 
 @media only screen and (max-width: 780px) {
@@ -96,6 +115,10 @@ font-weight: 600;
 }
 
 /* Featured project */
+.featured-project {  /*to account for the relatively positioned button*/
+  margin-top: -7rem;
+}
+
 .container-fluid {
   margin: 1rem 3rem;
 }
@@ -160,6 +183,11 @@ font-weight: 600;
 /* footer */
 footer {
   background-color: #f3f3f3;
+}
+
+footer .container {
+  width: 100%;
+  text-align: center;
 }
 
 footer .container h2 {
